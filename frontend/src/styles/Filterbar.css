@@ -1,0 +1,149 @@
+.filter-sidebar {
+    width: 280px;
+    background: #3e3d3d;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 15px;
+    border: 1px solid #2a2a2a;
+    position: sticky;
+    top: 90px;
+    font-size: 20px;
+}
+
+.filter-sidebar h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.filter-section {
+    margin-bottom: 25px;
+}
+.filter-section h4 {
+    color: #ff6b35;
+    margin-bottom: 30px;
+}
+.filter-section label {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.filter-section input {
+    margin-right: 10px;
+}
+
+.clear-btn {
+    width: 100%;
+    padding: 12px;
+    background: #ff6b35;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+
+/* =========================
+   FILTER SIDEBAR RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+
+  .filter-sidebar {
+    width: 100%;
+    max-width: 100%;
+    margin: 10px 0 20px;
+    padding: 15px;
+    border-radius: 12px;
+    position: relative;
+    top: 0;
+    font-size: 16px;
+  }
+
+  .filter-sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .filter-section {
+    margin-bottom: 18px;
+  }
+
+  .filter-section h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .filter-section label {
+    font-size: 14px;
+    margin-bottom: 9px;
+  }
+
+  .filter-section input {
+    margin-right: 8px;
+  }
+
+  .clear-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+   ========================= */
+
+@media (max-width: 480px) {
+
+  .filter-sidebar {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .filter-sidebar > h2 {
+    grid-column: 1 / -1;
+    margin: 0 0 5px;
+    text-align: center;
+  }
+
+  .filter-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .filter-section h4 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  .filter-section label {
+    width: 150px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0 auto 10px;
+    white-space: nowrap;
+  }
+
+  .filter-section input[type="radio"] {
+    flex-shrink: 0;
+    margin: 0;
+  }
+
+  .clear-btn {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin-top: 5px;
+  }
+}

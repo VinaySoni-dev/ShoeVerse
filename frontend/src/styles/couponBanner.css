@@ -1,0 +1,286 @@
+/* ==============================
+   Coupon Banner
+================================ */
+
+.coupon-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    min-height: 100px;
+
+    padding: 15px 35px;
+    box-sizing: border-box;
+
+    background-color: #f97316;
+
+    text-align: center;
+
+    border-radius: 0 0 30px 30px;
+
+    gap: 10px;
+
+    overflow: hidden;
+     border: 4px solid #f97316;
+    animation: couponBorder 2s linear infinite;
+}
+
+
+@keyframes couponBorder {
+    0% {
+        border-color: #080808;
+    }
+    50% {
+        border-color: #ffffff;
+    }
+    100% {
+        border-color: #f97316;
+    }
+}
+
+/* ==============================
+   Coupon Label
+================================ */
+
+.coupon-label {
+    display: block;
+
+    color: #18181b;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+
+    margin-bottom: 5px;
+}
+
+
+/* ==============================
+   Main Heading
+================================ */
+
+.coupon-banner h2 {
+    margin: 0;
+
+    font-size: 27px;
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+.coupon-banner h2 span {
+    color: #18181b;
+}
+
+
+/* ==============================
+   Paragraph
+================================ */
+
+.coupon-banner p {
+    margin: 7px 0 0;
+
+    color: #18181b;
+
+    font-size: 14px;
+}
+
+
+/* ==============================
+   Divider
+================================ */
+
+.coupon-divider {
+    width: 1px;
+    height: 65px;
+
+    background: rgba(255, 255, 255, 0.6);
+
+    flex-shrink: 0;
+}
+
+
+/* ==============================
+   Coupon Offer
+================================ */
+
+.coupon-offer {
+    text-align: center;
+
+    min-width: 220px;
+
+    flex-shrink: 0;
+}
+
+.coupon-offer h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.coupon-offer h2 span {
+    color: #18181b;
+
+    font-size: 34px;
+}
+
+.coupon-offer p {
+    margin: 2px 0 8px;
+
+    color: #18181b;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* ==============================
+   Coupon Code
+================================ */
+
+.coupon-code {
+    display: inline-block;
+
+    padding: 7px 14px;
+
+    border: 1px dashed #18181b;
+
+    border-radius: 6px;
+
+    background: #ffffff;
+
+    color: #52525b;
+
+    font-size: 13px;
+}
+
+.coupon-code strong {
+    color: #f97316;
+
+    font-size: 15px;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* ==============================
+   Shop Button
+================================ */
+
+.coupon-shop-btn {
+    flex-shrink: 0;
+
+    padding: 12px 22px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #18181b;
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.coupon-shop-btn span {
+    font-size: 20px;
+
+    transition: transform 0.25s ease;
+}
+
+
+/* ==============================
+   Button Hover
+================================ */
+
+.coupon-shop-btn:hover {
+    background: #000000;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.coupon-shop-btn:hover span {
+    transform: translateX(4px);
+}
+
+
+/* ==============================
+   Responsive
+================================ */
+
+@media (max-width: 900px) {
+
+    .coupon-banner {
+        padding: 15px 20px;
+        height: 50%;
+        gap: 15px;
+    }
+
+    .coupon-banner h2 {
+        font-size: 22px;
+    }
+
+    .coupon-offer {
+        min-width: 180px;
+    }
+
+    .coupon-offer h2 {
+        font-size: 22px;
+    }
+
+    .coupon-offer h2 span {
+        font-size: 28px;
+    }
+}
+
+
+/* ==============================
+   Mobile
+================================ */
+
+@media (max-width: 700px) {
+
+    .coupon-banner {
+        flex-direction: column;
+
+        min-height: auto;
+
+        padding: 25px 15px;
+
+        border-radius: 0 0 20px 20px;
+
+        gap: 15px;
+    }
+
+    .coupon-divider {
+        width: 80%;
+        height: 1px;
+    }
+
+    .coupon-offer {
+        min-width: 0;
+    }
+
+    .coupon-shop-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
