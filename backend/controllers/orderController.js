@@ -62,16 +62,22 @@ Thank you for shopping with us!
 Best regards,
 ShoeVerse Team`;
 
-    await sendemail(
-      req.user.email,
-      'Order Created',
-      message
-    );
+try {
+  await sendemail(
+    req.user.email,
+    'Order Created',
+    message
+  );
+} catch (emailError) {
+  console.error('Order email failed:', emailError);
+}
 
-    res.status(201).json({
-      message: 'Order created successfully',
-      order
-    });
+res.status(201).json({
+  message: 'Order created successfully',
+  order
+});
+
+
 
   } catch (error) {
     res.status(500).json({
