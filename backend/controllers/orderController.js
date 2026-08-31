@@ -2,7 +2,7 @@ const Order = require('../model/Order');
 const Product = require('../model/Product');
 
 
-const sendemail = require('../utils/sendEmail');
+const sendemail = require('../utils/sendemail');
 
 const createOrder = async (req, res) => {
   try {
