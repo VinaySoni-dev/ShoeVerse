@@ -53,7 +53,12 @@ Your order has been successfully created. Here are the details:
 
 Order ID: ${order._id}
 Total Amount: ${order.totalAmount}
-Shipping Address: ${order.address}
+Shipping Address: 
+${order.address.fullName}
+${order.address.street}
+${order.address.city}
+${order.address.postalCode}
+${order.address.country}
 
 We will notify you once your order is shipped.
 
